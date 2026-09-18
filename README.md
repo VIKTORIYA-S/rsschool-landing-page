@@ -1,0 +1,1 @@
+# Landing Page — учебный проект RS School
