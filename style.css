@@ -1,0 +1,116 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    height: 100vh;
+}
+
+/* HEADER */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(35, 9, 5, 0.984);
+    padding: 0 clamp(16px, 4vw, 40px);
+    /* сжимается вместе с шириной экрана */
+    position: fixed;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 195px;
+    gap: 5px;
+    align-items: center;
+}
+
+.logo__line {
+    width: 3px;
+    height: 57px;
+    margin: 0;
+    margin-top: 4px;
+    background-color: #FFFFFF;
+}
+
+.logo h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: clamp(16px, 3vw, 50px);
+    /* было жёстко 50px — теперь сжимается */
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    font-size: 18px;
+    color: #ffffff;
+    white-space: nowrap;
+    /* "О нас" больше не переносится на 2 строки */
+}
+
+li a:hover {
+    color: #df3434;
+    transition: 1s;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 10px;
+    background-color: #ffffffcb;
+    color: #9a0606;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.hero__button {
+    width: 260px;
+    height: 50px;
+    line-height: 40px;
+    /* чтобы текст встал по центру кнопки-ссылки */
+}
+
+.button_border {
+    border: 3px solid #9a0606;
+}
+
+.button:hover {
+    color: #ffffffcb;
+    background-color: #9a0606;
+    border: 3px solid #ffffff;
+    transition: 1s;
+    cursor: pointer;
+}
