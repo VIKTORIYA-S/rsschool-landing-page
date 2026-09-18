@@ -114,3 +114,161 @@ li a:hover {
     transition: 1s;
     cursor: pointer;
 }
+
+/* BURGER */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* иконка превращается в крестик, когда меню открыто */
+.burger[aria-expanded="true"] .burger__line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] .burger__line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger[aria-expanded="true"] .burger__line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: min(75%, 320px);
+        height: 100vh;
+        background-color: rgba(30, 8, 4, 0.97);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 15;
+    }
+
+    .nav.nav--open {
+        transform: translateX(0);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        padding: 100px 32px 0;
+        margin: 0;
+    }
+
+    li a {
+        font-size: 20px;
+    }
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    aspect-ratio: 16 / 6;
+    /* держит пропорции при любой ширине, вместо фиксированных 650px */
+    min-height: 320px;
+    /* чтобы на мобильном не сплющивалось совсем */
+    overflow: hidden;
+    padding: 0 clamp(16px, 4vw, 60px);
+    margin-top: 70px;
+}
+
+.hero__media {
+    position: absolute;
+    inset: 0;
+    background-image: url('img/background.jpg');
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+    background-position: center;
+    filter: blur(7px);
+    transform: scale(1.1);
+}
+
+.hero__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(52, 44, 43, 0.55);
+    /* тот же тёмный тон, что в хедере */
+}
+
+.hero__overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(16px, 4vw, 64px);
+    padding: clamp(16px, 4vw, 64px);
+}
+
+.hero__card {
+    max-width: 540px;
+    background-color: rgba(30, 8, 4, 0.78);
+    border-radius: clamp(20px, 4vw, 60px);
+    padding: clamp(16px, 3vw, 32px);
+    text-align: center;
+}
+
+.hero__title {
+    font-size: clamp(22px, 3vw, 36px);
+    color: #fff;
+    margin: 0 0 12px;
+}
+
+.hero__text {
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #bbb;
+    margin: 0 0 16px;
+}
+
+.hero__promo {
+    display: none;
+    /* показываем только когда есть место */
+    max-width: 25%;
+    height: auto;
+    border-radius: 30px;
+}
+
+@media (min-width: 900px) {
+    .hero__promo {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero__overlay {
+        justify-content: center;
+    }
+
+    .hero__card {
+        max-width: 90%;
+    }
+}
+
