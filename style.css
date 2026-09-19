@@ -20,9 +20,9 @@ a {
     text-decoration: none;
 }
 
-section {
+/* section {
     height: 100vh;
-}
+} */
 
 /* HEADER */
 .header {
@@ -447,6 +447,8 @@ li a:hover {
 .promo__card-title {
     font-size: clamp(15px, 1.6vw, 19px);
     color: #9a0606;
+    line-height: 1.2;
+    min-height: 2.4em;
     margin: 0 0 6px;
 }
 
@@ -526,7 +528,9 @@ li a:hover {
 }
 
 .catalog__card-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     text-align: center;
     color: inherit;
 }
@@ -541,6 +545,7 @@ li a:hover {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: stretch;
     /* карточки НЕ переносятся, идут в один ряд */
     gap: clamp(20px, 4vw, 40px);
     list-style: none;
@@ -551,6 +556,7 @@ li a:hover {
 
 .catalog__card {
     flex: 0 0 240px;
+    display: flex;
     /* фиксированная ширина карточки, не сжимается */
     padding-bottom: 30px;
     transition: box-shadow 0.5s;
@@ -584,6 +590,7 @@ li a:hover {
     letter-spacing: 1.4px;
     margin: 25px 0 20px;
     color: #9a0606;
+    flex: 1;
 }
 
 .catalog__card-btn {
@@ -594,6 +601,7 @@ li a:hover {
     border-radius: 100px;
     border: 2px solid #a11818;
     font-size: 17px;
+    margin: 0 auto;
 }
 
 .catalog__card-link:hover .catalog__card-btn {
