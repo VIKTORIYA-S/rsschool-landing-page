@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +14,23 @@
             <h2>import <br> products</h2>
         </div>
 
-        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-        </button>
+        <div class="nav__container">
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
 
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="#content">О нас</a></li>
-                <li><a href="#friends">Каталог</a></li>
-                <li><a href="#">Акции и скидки</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#friends">Каталог</a></li>
+                    <li><a href="#promo">Акции и скидки</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <img class="sun" src="img/1_sun.png" alt="Солнце" width="40">
+        </div>
     </header>
     <main>
         <section class="hero">
@@ -45,20 +48,100 @@
                 <img class="hero__promo" src="img/plate.png" alt="Праздничный набор продуктов">
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__gallery">
                 <img class="about__img about__img--1" src="img/chemistry.jpeg" alt="Средства для уборки дома">
                 <img class="about__img about__img--2" src="img/hygiene.jpg" alt="Средства гигиены">
                 <img class="about__img about__img--3" src="img/products.jpg" alt="Продукты и напитки">
             </div>
             <div class="about__content">
-                <h2 class="about__title" id="content">Обо всём, что есть в нашем магазине</h2>
+                <h2 class="about__title">Обо всём, что есть в нашем магазине</h2>
                 <p class="about__text">
                     В одном каталоге собрали продукты, бытовую химию и товары для всей семьи —
                     от повседневных покупок до подарков близким. Бонусом идет также бесплатная доставка по городу и области, а также возможность оформить заказ онлайн.
                 </p>
                 <a href="#friends" class="button hero__button button_border">Перейти в каталог</a>
             </div>
+        </section>
+        <section class="promo" id="promo">
+            <h2 class="promo__title">Акции и скидки</h2>
+        
+            <ul class="promo__grid">
+                <li class="promo__card promo__card--large">
+                    <span class="promo__badge">−20%</span>
+                    <img class="promo__img promo__img--dairy" src="img/promo-dairy.png" alt="Скидка на молочные продукты">
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Молочные продукты</h3>
+                        <p class="promo__card-text">Скидка на весь ассортимент молока, сыров и йогуртов до конца месяца.</p>
+                    </div>
+                </li>
+        
+                <li class="promo__card promo__card--medium">
+                    <span class="promo__badge">2 по цене 1</span>
+                    <img class="promo__img promo__img--hygiene" src="img/promo-hygiene.png" alt="Акция на средства гигиены">
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Средства гигиены</h3>
+                    </div>
+                </li>
+        
+                <li class="promo__card promo__card--medium">
+                    <span class="promo__badge">−15%</span>
+                    <img class="promo__img promo__img--household" src="img/promo-household.png" alt="Скидка на хозтовары">
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Хозяйственные товары</h3>
+                    </div>
+                </li>
+        
+                <li class="promo__card promo__card--small">
+                    <span class="promo__badge">−10%</span>
+                    <img class="promo__img promo__img--kids" src="img/promo-kids.png" alt="Скидка на детские товары">
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Товары для детей</h3>
+                    </div>
+                </li>
+        
+                <li class="promo__card promo__card--small">
+                    <span class="promo__badge">Новинка</span>
+                    <img class="promo__img promo__img--gifts" src="img/promo-gifts.png" alt="Подарочные наборы">
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Подарочные наборы</h3>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="catalog" id="friends">
+            <h2 class="catalog__title">Каталог</h2>
+            <div class="catalog__container">
+                <button class="catalog__arrow catalog__arrow--left" aria-label="Предыдущая категория"></button>
+                <div class="catalog__viewport">
+                    <ul class="catalog__track">
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=household" class="catalog__card-link">
+                                <img class="catalog__card-img" src="img/chemistry.jpeg" alt="Хозяйственные товары" width="240" height="160">
+                                <h3 class="catalog__card-title">Хозяйственные <br> товары</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=hygiene" class="catalog__card-link">
+                                <img class="catalog__card-img" src="img/hygiene.jpg" alt="Средства гигиены" width="240" height="160">
+                                <h3 class="catalog__card-title">Средства <br> гигиены</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=products" class="catalog__card-link">
+                                <img class="catalog__card-img" src="img/products.jpg" alt="Продукты" width="240" height="160">
+                                <h3 class="catalog__card-title">Продукты</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="catalog__arrow catalog__arrow--right" aria-label="Следующая категория"></button>
+            </div>
+
+            <a href="./catalog/catalog.html" class="button catalog__more-btn" target="_blank">Посмотреть все товары</a>
         </section>
     </main>
 </body>
