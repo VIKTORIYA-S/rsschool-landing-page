@@ -1,3 +1,35 @@
+:root {
+    /* светлая тема (по умолчанию) */
+    --color-bg: #ffffff;
+    --color-bg-secondary: #dfdede9d;
+    --color-text: #292929;
+    --color-text-muted: #3c3c3c;
+    --color-accent: #9a0606;
+    --color-header-bg: rgba(35, 9, 5, 0.984);
+    --color-card-bg: #ffffff;
+    --color-white: #ffffff;
+    --color-hover: #df3434;
+    --color-on-dark: #ffffff;
+}
+
+[data-theme="dark"] {
+    --color-bg: #1a1a1a;
+    --color-bg-secondary: #242424;
+    --color-text: #e8e8e8;
+    --color-text-muted: #bbbbbb;
+    --color-accent: #e05c5c;
+    --color-header-bg: rgba(15, 5, 3, 0.98);
+    --color-card-bg: #2a2a2a;
+    --color-white: #2a2a2a;
+    --color-on-dark: #ffffff;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -32,7 +64,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(35, 9, 5, 0.984);
+    background-color:var(--color-header-bg);
     padding: 0 clamp(16px, 4vw, 40px);
     /* сжимается вместе с шириной экрана */
     position: fixed;
@@ -53,12 +85,12 @@ a {
     height: 57px;
     margin: 0;
     margin-top: 4px;
-    background-color: #FFFFFF;
+    background-color: var(--color-on-dark);
 }
 
 .logo h2 {
     font-size: 26px;
-    color: #ffffff;
+    color: var(--color-on-dark);
     margin: 0;
 }
 
@@ -82,18 +114,42 @@ a {
 
 li a {
     font-size: 18px;
-    color: #ffffff;
+    color: var(--color-on-dark);
     white-space: nowrap;
     /* "О нас" больше не переносится на 2 строки */
 }
 
 li a:hover {
-    color: #df3434;
+    color: var(--color-hover);
     transition: 1s;
 }
 
-.sun {
+/* .sun {
     transform: rotate(225deg);
+    cursor: pointer;
+} */
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #f5d903;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle__icon--moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+    display: block;
 }
 
 /* BUTTON */
@@ -101,8 +157,8 @@ li a:hover {
     display: inline-block;
     border-radius: 50px;
     margin-top: 10px;
-    background-color: #ffffffcb;
-    color: #9a0606;
+    background-color: var(--color-white);
+    color: var(--color-accent);
     font-size: 20px;
     padding: 5px;
     text-align: center;
@@ -117,13 +173,13 @@ li a:hover {
 }
 
 .button_border {
-    border: 3px solid #9a0606;
+    border: 3px solid var(--color-accent);
 }
 
 .button:hover {
     color: #ffffffcb;
-    background-color: #9a0606;
-    border: 3px solid #ffffff;
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-bg);
     transition: 1s;
     cursor: pointer;
 }
@@ -147,7 +203,7 @@ li a:hover {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: var(--color-bg);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -252,7 +308,7 @@ li a:hover {
 
 .hero__title {
     font-size: clamp(22px, 3vw, 36px);
-    color: #fff;
+    color: var(--color-on-dark);
     margin: 0 0 12px;
 }
 
@@ -265,7 +321,7 @@ li a:hover {
 .hero__promo {
     display: none;
     /* показываем только когда есть место */
-    max-width: 26.8%;
+    max-width: 25%;
     height: auto;
     border-radius: 30px;
 }
@@ -298,7 +354,7 @@ li a:hover {
     align-items: center;
     gap: clamp(24px, 5vw, 64px);
     padding: clamp(32px, 6vw, 96px) clamp(16px, 4vw, 40px);
-    background-color: #dfdede9d;
+    background-color: var(--color-bg-secondary);
     padding-bottom: 0;
 }
 
@@ -343,14 +399,14 @@ li a:hover {
 }
 
 .about__title {
-    color: #9a0606;
+    color: var(--color-accent);
     font-size: clamp(22px, 2.5vw, 32px);
     margin: 0 0 16px;
 }
 
 .about__text {
     font-size: clamp(14px, 1.3vw, 18px);
-    color: #3c3c3c;
+    color: var(--color-text-muted);
     margin: 0 0 24px;
 }
 
@@ -368,7 +424,7 @@ li a:hover {
 }
 
 .promo__title {
-    color: #9a0606;
+    color: var(--color-accent);
     font-size: clamp(24px, 3vw, 36px);
     margin: 0 0 clamp(32px, 5vw, 59px);
 }
@@ -413,7 +469,7 @@ li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--color-card-bg);
     border-radius: 20px;
     box-shadow: 0 3px 26px -14px rgba(66, 68, 90, 0.6);
     overflow: hidden;
@@ -424,8 +480,8 @@ li a:hover {
     top: 14px;
     left: 14px;
     z-index: 1;
-    background-color: #9a0606;
-    color: #fff;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
     font-size: 13px;
     font-weight: 700;
     padding: 5px 12px;
@@ -446,7 +502,7 @@ li a:hover {
 
 .promo__card-title {
     font-size: clamp(15px, 1.6vw, 19px);
-    color: #9a0606;
+    color: var(--color-accent);
     line-height: 1.2;
     min-height: 2.4em;
     margin: 0 0 6px;
@@ -454,7 +510,7 @@ li a:hover {
 
 .promo__card-text {
     font-size: clamp(13px, 1.3vw, 14px);
-    color: #3c3c3c;
+    color: var(--color-text-muted);
     line-height: 1.4;
     margin: 0;
 }
@@ -502,7 +558,7 @@ li a:hover {
 }
 
 .catalog__title {
-    color: #9a0606;
+    color: var(--color-accent);
     font-size: clamp(24px, 3vw, 36px);
     margin: 0 0 clamp(32px, 5vw, 59px);
 }
@@ -541,13 +597,17 @@ li a:hover {
     /* занимает всё доступное место между стрелками */
 }
 
+.catalog__viewport::-webkit-scrollbar {
+    display: none;
+}
+
 .catalog__track {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: stretch;
-    /* карточки НЕ переносятся, идут в один ряд */
-    gap: clamp(20px, 4vw, 40px);
+    /* gap: clamp(20px, 4vw, 40px); */
+    gap: 24px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -555,17 +615,35 @@ li a:hover {
 }
 
 .catalog__card {
-    flex: 0 0 240px;
-    display: flex;
+    flex: 0 0 calc((100% - 2 * 24px) / 3);
+    /* display: flex; */
     /* фиксированная ширина карточки, не сжимается */
     padding-bottom: 30px;
     transition: box-shadow 0.5s;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     .catalog__card {
-        flex: 0 0 200px;
+        flex: 0 0 calc((100% - 24px) / 2);
+        align-items: center;
+        /* 1 отступ между 2 карточками */
+    }
+}
+
+@media (max-width: 600px) {
+    .catalog__card {
+        flex: 0 0 100px;
         /* на мобильном карточки чуть уже, чтобы видно было "краешек" следующей */
+    }
+
+    .catalog__container {
+        gap: 8px;
+    }
+
+    .catalog__arrow {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
     }
 }
 
@@ -576,7 +654,7 @@ li a:hover {
 
 .catalog__card-img {
     width: 100%;
-    max-width: 240px;
+    /* max-width: 240px; */
     height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
@@ -589,7 +667,7 @@ li a:hover {
     font-weight: 400;
     letter-spacing: 1.4px;
     margin: 25px 0 20px;
-    color: #9a0606;
+    color: var(--color-accent);
     flex: 1;
 }
 
@@ -606,7 +684,7 @@ li a:hover {
 
 .catalog__card-link:hover .catalog__card-btn {
     background-color: #a11515;
-    color: #ffffff;
+    color: var(--color-bg);
 }
 
 /* стрелки — пока декоративные, JS добавим при переключении категорий на неделе 2 */
@@ -615,7 +693,7 @@ li a:hover {
     width: 52px;
     height: 52px;
     border-radius: 100px;
-    border: 2px solid #9a0606;
+    border: 2px solid var(--color-accent);
     background: none;
     cursor: pointer;
     position: relative;
@@ -633,8 +711,8 @@ li a:hover {
     left: 55%;
     width: 12px;
     height: 12px;
-    border-left: 2px solid #292929;
-    border-bottom: 2px solid #292929;
+    border-left: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -645,17 +723,24 @@ li a:hover {
     left: 45%;
     width: 12px;
     height: 12px;
-    border-right: 2px solid #292929;
-    border-top: 2px solid #292929;
+    border-right: 2px solid var(--color-accent);
+    border-top: 2px solid var(--color-accent);
     transform: translate(-50%, -50%) rotate(45deg);
 }
+
+.catalog__arrow--left:hover::before,
+.catalog__arrow--right:hover::before {
+    border-color: var(--color-white);
+    /* меняет цвет всех границ элемента разом */
+}
+
 
 .catalog__more-btn {
     display: inline-block;
     width: min(420px, 100%);
     padding: 16px 20px;
     border-radius: 100px;
-    background-color: rgb(253, 251, 251);
+    background-color: var(--color-white);
     color: #a11515;
     border: 3px solid rgb(125, 22, 22);
     font-size: clamp(16px, 2vw, 24px);

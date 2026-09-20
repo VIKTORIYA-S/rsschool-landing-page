@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <title>Import_products</title>
 </head>
@@ -29,7 +37,25 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <img class="sun" src="img/1_sun.png" alt="Солнце" width="40">
+            <!-- <img class="sun" src="img/1_sun.png" alt="Солнце" width="40"> -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -43,7 +69,7 @@
                         В нашем магазине вы можете приобрести не только свежайшие продукты,
                         средства гигиены и бытовую химию, но и приятные подарки для своих близких.
                     </p>
-                    <a href="#friends" class="button hero__button">Перейти в каталог</a>
+                    <a href="#friends" class="button hero__button button_border">Перейти в каталог</a>
                 </div>
                 <img class="hero__promo" src="img/plate.png" alt="Праздничный набор продуктов">
             </div>
@@ -144,5 +170,6 @@
             <a href="./catalog/catalog.html" class="button catalog__more-btn" target="_blank">Посмотреть все товары</a>
         </section>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
