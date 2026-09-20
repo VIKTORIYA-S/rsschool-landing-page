@@ -1,15 +1,17 @@
 :root {
-    /* светлая тема (по умолчанию) */
-    --color-bg: #ffffff;
+    
+    --color-bg: #f9e5d5;
     --color-bg-secondary: #dfdede9d;
     --color-text: #292929;
     --color-text-muted: #3c3c3c;
     --color-accent: #9a0606;
-    --color-header-bg: rgba(35, 9, 5, 0.984);
     --color-card-bg: #ffffff;
     --color-white: #ffffff;
     --color-hover: #df3434;
-    --color-on-dark: #ffffff;
+
+    --color-header-bg: #9a0606;
+    --color-on-header: #ffffff;
+    --color-on-header-hover: #f4b906;
 }
 
 [data-theme="dark"] {
@@ -52,10 +54,6 @@ a {
     text-decoration: none;
 }
 
-/* section {
-    height: 100vh;
-} */
-
 /* HEADER */
 .header {
     top: 0;
@@ -66,7 +64,6 @@ a {
     align-items: center;
     background-color:var(--color-header-bg);
     padding: 0 clamp(16px, 4vw, 40px);
-    /* сжимается вместе с шириной экрана */
     position: fixed;
     z-index: 10;
 }
@@ -75,9 +72,11 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 195px;
+    flex-shrink: 0;
     gap: 5px;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo__line {
@@ -85,12 +84,13 @@ a {
     height: 57px;
     margin: 0;
     margin-top: 4px;
-    background-color: var(--color-on-dark);
+    background-color: var(--color-on-header);
+    flex-shrink: 0;
 }
 
 .logo h2 {
     font-size: 26px;
-    color: var(--color-on-dark);
+    color: var(--color-on-header);
     margin: 0;
 }
 
@@ -114,20 +114,14 @@ a {
 
 li a {
     font-size: 18px;
-    color: var(--color-on-dark);
+    color: var(--color-on-header);
     white-space: nowrap;
-    /* "О нас" больше не переносится на 2 строки */
 }
 
 li a:hover {
-    color: var(--color-hover);
+    color: var(--color-on-header-hover);
     transition: 1s;
 }
-
-/* .sun {
-    transform: rotate(225deg);
-    cursor: pointer;
-} */
 
 .theme-toggle {
     background: none;
@@ -163,13 +157,13 @@ li a:hover {
     padding: 5px;
     text-align: center;
     font-weight: 800;
+    outline: none;
 }
 
 .hero__button {
     width: 260px;
     height: 50px;
     line-height: 40px;
-    /* чтобы текст встал по центру кнопки-ссылки */
 }
 
 .button_border {
@@ -203,12 +197,11 @@ li a:hover {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--color-bg);
+    background-color: var(--color-on-header);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* иконка превращается в крестик, когда меню открыто */
 .burger[aria-expanded="true"] .burger__line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -260,9 +253,7 @@ li a:hover {
     width: 100%;
     height: 90vh;
     aspect-ratio: 16 / 6;
-    /* держит пропорции при любой ширине, вместо фиксированных 650px */
     min-height: 320px;
-    /* чтобы на мобильном не сплющивалось совсем */
     overflow: hidden;
     padding: 0 clamp(16px, 4vw, 60px);
     margin-top: 70px;
@@ -273,7 +264,6 @@ li a:hover {
     inset: 0;
     background-image: url('img/background.jpg');
     background-repeat: repeat-x;
-    /* background-size: cover; */
     background-position: center;
     filter: blur(7px);
     transform: scale(1.1);
@@ -284,7 +274,6 @@ li a:hover {
     position: absolute;
     inset: 0;
     background: rgba(52, 44, 43, 0.55);
-    /* тот же тёмный тон, что в хедере */
 }
 
 .hero__overlay {
@@ -308,7 +297,7 @@ li a:hover {
 
 .hero__title {
     font-size: clamp(22px, 3vw, 36px);
-    color: var(--color-on-dark);
+    color: var(--color-on-header);
     margin: 0 0 12px;
 }
 
@@ -320,7 +309,6 @@ li a:hover {
 
 .hero__promo {
     display: none;
-    /* показываем только когда есть место */
     max-width: 25%;
     height: auto;
     border-radius: 30px;
@@ -345,7 +333,6 @@ li a:hover {
 /* ABOUT */
 .about {
     min-height: 100vh;
-    /* вместо унаследованного height: 100vh от общего section */
 }
 
 .about {
@@ -354,7 +341,7 @@ li a:hover {
     align-items: center;
     gap: clamp(24px, 5vw, 64px);
     padding: clamp(32px, 6vw, 96px) clamp(16px, 4vw, 40px);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg);
     padding-bottom: 0;
 }
 
@@ -363,7 +350,6 @@ li a:hover {
     flex: 1 1 320px;
     aspect-ratio: 4 / 3;
     max-width: 480px;
-    /* overflow: hidden; */
 }
 
 .about__img {
@@ -374,7 +360,6 @@ li a:hover {
     box-shadow: -7px -7px 26px -7px rgba(66, 68, 90, 0.4);
 }
 
-/* смещения в % от родителя, а не в px — масштабируются вместе с блоком */
 .about__img--1 {
     top: 0;
     left: 0;
@@ -515,7 +500,6 @@ li a:hover {
     margin: 0;
 }
 
-/* планшет — крупная карточка сверху на всю ширину, остальные в 2 колонки */
 @media (max-width: 900px) {
     .promo__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -528,11 +512,9 @@ li a:hover {
 
     .promo__card--large .promo__img {
         aspect-ratio: 16 / 7;
-        /* чтобы крупная карточка не была слишком высокой сверху */
     }
 }
 
-/* мобильный — всё в один столбик */
 @media (max-width: 560px) {
     .promo__grid {
         grid-template-columns: 1fr;
@@ -548,8 +530,6 @@ li a:hover {
         aspect-ratio: 4 / 3;
     }
 }
-
-/* Секции каталога (#friends), модалки и темы здесь ещё нет — добавим следующими шагами */
 
 /* CATALOG */
 .catalog {
@@ -570,17 +550,6 @@ li a:hover {
     gap: clamp(16px, 3vw, 53px);
     margin: 0 auto 40px;
     max-width: 1100px;
-    /* подберите под ширину 3-4 карточек с отступами */
-}
-
-.catalog__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: clamp(20px, 4vw, 90px);
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .catalog__card-link {
@@ -594,7 +563,6 @@ li a:hover {
 .catalog__viewport {
     overflow: hidden;
     flex: 1;
-    /* занимает всё доступное место между стрелками */
 }
 
 .catalog__viewport::-webkit-scrollbar {
@@ -604,9 +572,7 @@ li a:hover {
 .catalog__track {
     display: flex;
     flex-wrap: nowrap;
-    /* justify-content: center; */
     align-items: stretch;
-    /* gap: clamp(20px, 4vw, 40px); */
     gap: 24px;
     list-style: none;
     margin: 0;
@@ -616,8 +582,12 @@ li a:hover {
 
 .catalog__card {
     flex: 0 0 calc((100% - 2 * 24px) / 3);
-    /* display: flex; */
-    /* фиксированная ширина карточки, не сжимается */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-card-bg);
+    border-radius: 20px;
+    padding: 16px 16px 30px;
+    box-shadow: 0 3px 20px -14px rgba(0, 0, 0, 0.6);
     padding-bottom: 30px;
     transition: box-shadow 0.5s;
 }
@@ -626,14 +596,12 @@ li a:hover {
     .catalog__card {
         flex: 0 0 calc((100% - 24px) / 2);
         align-items: center;
-        /* 1 отступ между 2 карточками */
     }
 }
 
 @media (max-width: 600px) {
     .catalog__card {
-        flex: 0 0 100px;
-        /* на мобильном карточки чуть уже, чтобы видно было "краешек" следующей */
+        flex: 0 0 100%;
     }
 
     .catalog__container {
@@ -654,11 +622,9 @@ li a:hover {
 
 .catalog__card-img {
     width: 100%;
-    /* max-width: 240px; */
     height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    /* фото не искажается, если пропорции файла другие */
     border-radius: 20px;
 }
 
@@ -687,7 +653,6 @@ li a:hover {
     color: var(--color-bg);
 }
 
-/* стрелки — пока декоративные, JS добавим при переключении категорий на неделе 2 */
 .catalog__arrow {
     flex-shrink: 0;
     width: 52px;
@@ -731,7 +696,6 @@ li a:hover {
 .catalog__arrow--left:hover::before,
 .catalog__arrow--right:hover::before {
     border-color: var(--color-white);
-    /* меняет цвет всех границ элемента разом */
 }
 
 
@@ -747,14 +711,45 @@ li a:hover {
     font-weight: 800;
 }
 
-@media (max-width: 700px) {
-    .catalog__container {
-        flex-direction: column;
-    }
-
-    .catalog__arrow {
-        display: none;
-        /* на мобильном карточки просто идут в столбик, стрелки не нужны */
-    }
+/* FOOTER */
+.footer {
+    background-color: var(--color-header-bg);
+    color: var(--color-on-header);
+    padding: 20px;
+    text-align: center;
 }
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.footer__icon-link {
+    color: var(--color-on-header);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.footer__icon-link:hover {
+    color: var(--color-on-header-hover);
+}
+
+.footer__author {
+    font-size: clamp(15px, 1.6vw, 18px);
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.footer__copy {
+    font-size: clamp(12px, 1.3vw, 14px);
+    color: var(--color-on-header);
+    opacity: 0.75;
+    margin: 0;
+}
+
+
 
