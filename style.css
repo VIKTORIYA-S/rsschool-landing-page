@@ -50,6 +50,13 @@ html {
     scroll-behavior: smooth;
 }
 
+#about,
+#promo,
+#friends,
+#contacts {
+    scroll-margin-top: 70px;
+}
+
 a {
     text-decoration: none;
 }
@@ -214,7 +221,7 @@ li a:hover {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .burger {
         display: flex;
     }
@@ -331,11 +338,7 @@ li a:hover {
 }
 
 /* ABOUT */
-.about {
-    min-height: 100vh;
-}
-
-.about {
+/* .about {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -343,7 +346,27 @@ li a:hover {
     padding: clamp(32px, 6vw, 96px) clamp(16px, 4vw, 40px);
     background-color: var(--color-bg);
     padding-bottom: 0;
-}
+    min-height: 100vh;
+} */
+
+ .about {
+     padding: clamp(32px, 6vw, 96px) clamp(16px, 4vw, 40px);
+     /* background-color: var(--color-bg-secondary); */
+     /* padding-bottom: 0; */
+     /* min-height: 100vh; */
+ }
+
+ .about__inner {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: clamp(24px, 5vw, 64px);
+     max-width: 1440px;
+     margin: 0 auto;
+
+    /* padding-top: 5%;
+    padding-left: 3%; */
+ }
 
 .about__gallery {
     position: relative;
@@ -386,7 +409,7 @@ li a:hover {
 .about__title {
     color: var(--color-accent);
     font-size: clamp(22px, 2.5vw, 32px);
-    margin: 0 0 16px;
+    margin: 30px 0 16px;
 }
 
 .about__text {
@@ -719,11 +742,16 @@ li a:hover {
     text-align: center;
 }
 
+.footer__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .footer__social {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 3px;
 }
 
 .footer__icon-link {
@@ -751,5 +779,25 @@ li a:hover {
     margin: 0;
 }
 
+.footer__contacts {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
+.footer__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-on-header);
+    font-size: clamp(13px, 1.4vw, 15px);
+}
+
+.footer__contact-link:hover {
+    color: var(--color-on-header-hover);
+}
 
