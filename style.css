@@ -66,13 +66,19 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color:var(--color-header-bg);
     padding: 0 clamp(16px, 4vw, 40px);
     position: fixed;
     z-index: 10;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
 }
 
 .logo {
@@ -783,7 +789,7 @@ li a:hover {
     display: flex;
     justify-content: center;
     gap: 24px;
-    list-style: none;
+    list-style-type: none;
     margin: 0 0 8px;
     padding: 0;
     flex-wrap: wrap;
