@@ -28,6 +28,11 @@
     --color-on-header-hover: #ff8a8a;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--color-bg);
     color: var(--color-text);

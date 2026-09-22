@@ -70,6 +70,7 @@ a {
     padding: 0 clamp(16px, 4vw, 40px);
     position: fixed;
     z-index: 10;
+    overflow-x: hidden;
 }
 
 .header__inner {
@@ -174,8 +175,6 @@ li a:hover {
 }
 
 .hero__button {
-    /* width: 260px; */
-    height: 50px;
     line-height: 40px;
     padding-left: 15px;
     padding-right: 15px;
@@ -240,7 +239,7 @@ li a:hover {
         width: min(75%, 320px);
         height: 100vh;
         background-color: rgba(30, 8, 4, 0.97);
-        transform: translateX(100%);
+        transform: translateX(103%);
         transition: transform 0.3s ease;
         z-index: 15;
     }
