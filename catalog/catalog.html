@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Каталог — Import Products</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.png" alt="Логотип Import Products" width="70">
+                <div class="logo__line"></div>
+                <h2>import <br> products</h2>
+            </a>
+
+            <div class="nav__container">
+                <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="../index.html#about">О нас</a></li>
+                        <li><a href="../index.html#promo">Акции и скидки</a></li>
+                        <li><a href="../index.html#friends">Каталог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" width="22" height="22" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop">
+            <h1 class="shop__title">Каталог товаров</h1>
+
+            <div class="shop__filters" role="group" aria-label="Категории товаров">
+                <button class="filter filter--active" aria-pressed="true" data-category="all">Все товары</button>
+                <button class="filter" aria-pressed="false" data-category="household">Хозяйственные товары</button>
+                <button class="filter" aria-pressed="false" data-category="hygiene">Средства гигиены</button>
+                <button class="filter" aria-pressed="false" data-category="products">Продукты</button>
+                <button class="filter" aria-pressed="false" data-category="kids">Товары для детей</button>
+            </div>
+
+            <h2 class="shop__grid-title visually-hidden">Товары</h2>
+
+            <ul class="shop__grid">
+                <li class="product" data-category="household">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/household_gel.png" alt="Гель для стирки" width="240"
+                            height="200">
+                    </div>
+                    <h3 class="product__title">Гель для стирки</h3>
+                    <p class="product__desc">Для всех типов тканей, без агрессивных химикатов</p>
+                    <div class="product__meta">
+                        <span class="product__weight">1 л</span>
+                        <span class="product__price">340 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="hygiene">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/hygiene_shampoo.png" alt="Шампунь для волос" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Шампунь для волос</h3>
+                    <p class="product__desc">Для всех типов волос, без сульфатов</p>
+                    <div class="product__meta">
+                        <span class="product__weight">400 мл</span>
+                        <span class="product__price">280 ₽</span>
+                    </div>
+                </li>
+                <li class="product" data-category="products">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/deodorant.png" alt="Дезодорант мужской" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Дезодорант мужской</h3>
+                    <p class="product__desc">Эффективная защита от запаха и пота</p>
+                    <div class="product__meta">
+                        <span class="product__weight">150 мл</span>
+                        <span class="product__price">159 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="kids">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/detergent.png" alt="Порошок стиральный" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Порошок стиральный</h3>
+                    <p class="product__desc">Для всех типов тканей, гипоаллергенный</p>
+                    <div class="product__meta">
+                        <span class="product__weight">1000 мл</span>
+                        <span class="product__price">250 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="household">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/household_sponges.png" alt="Губки для посуды" width="240"
+                            height="200">
+                    </div>
+                    <h3 class="product__title">Губки для посуды</h3>
+                    <p class="product__desc">Набор из 5 штук, мягкие и прочные</p>
+                    <div class="product__meta">
+                        <span class="product__weight">5 шт.</span>
+                        <span class="product__price">40 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="hygiene">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/hygiene_toothpaste.png" alt="Зубная паста" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Зубная паста</h3>
+                    <p class="product__desc">С отбеливающим эффектом, без фтора</p>
+                    <div class="product__meta">
+                        <span class="product__weight">75 мл</span>
+                        <span class="product__price">150 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="products">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/napkins.png" alt="Салфетки" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Салфетки бумажные</h3>
+                    <p class="product__desc">Набор из 100 штук, мягкие и прочные</p>
+                    <div class="product__meta">
+                        <span class="product__weight">100 шт.</span>
+                        <span class="product__price">129 ₴</span>
+                    </div>
+                </li>
+                <li class="product" data-category="kids">
+                    <div class="product__img-wrapper">
+                        <img class="product__img" src="../img/soap.png" alt="Мыло гигиеническое" width="240" height="200">
+                    </div>
+                    <h3 class="product__title">Мыло гигиеническое</h3>
+                    <p class="product__desc">Натуральное мыло для детей, без ароматизаторов</p>
+                    <div class="product__meta">
+                        <span class="product__weight">100 г</span>
+                        <span class="product__price">65 ₴</span>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="button shop__load-more button_border">Показать ещё</button>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="footer__inner">
+            <ul class="footer__contacts">
+                <li>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@importproducts.ru" target="_blank"
+                        rel="noopener noreferrer" class="footer__contact-link">
+                        info@importproducts.ua
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+380991234567" class="footer__contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +380 (99) 123-45-67
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer__social">
+                <div class="footer__social">
+                    <a href="https://github.com/VIKTORIYA-S" class="footer__icon-link" aria-label="GitHub" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://rs.school/" class="footer__icon-link" aria-label="RS School" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm0 15.5L4.5 13v3.5c0 2.5 3.36 4.5 7.5 4.5s7.5-2 7.5-4.5V13L12 17.5z" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+
+            <p class="footer__author">Victoria Suprun</p>
+            <p class="footer__copy">© 2026 Import Products. Учебный проект RS School.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

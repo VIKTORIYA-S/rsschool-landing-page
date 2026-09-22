@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Import_products</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип Import Products" width="70">
+                <div class="logo__line"></div>
+                <h2>import <br> products</h2>
+            </a>
+
+            <div class="nav__container">
+                <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#promo">Акции и скидки</a></li>
+                        <li><a href="./catalog/catalog.html">Каталог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__media">
+            </div>
+            <div class="hero__overlay">
+                <div class="hero__card">
+                    <h1 class="hero__title">Все самое вкусное!</h1>
+                    <p class="hero__text">
+                        В нашем магазине вы можете приобрести не только свежайшие продукты,
+                        средства гигиены и бытовую химию, но и приятные подарки для своих близких.
+                    </p>
+                    <a href="#friends" class="button hero__button button_border">Посмотреть все категории</a>
+                </div>
+                <img class="hero__promo" src="img/plate.png" alt="Праздничный набор продуктов">
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__inner">
+                <div class="about__gallery">
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--1" src="img/chemistry.jpeg" alt="Средства для уборки дома">
+                    </div>
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--2" src="img/hygiene.jpg" alt="Средства гигиены">
+                    </div>
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--3" src="img/products.jpg" alt="Продукты и напитки">
+                    </div>
+                </div>
+                <div class="about__content">
+                    <h2 class="about__title">Обо всём, что есть в нашем магазине</h2>
+                    <p class="about__text">
+                        В одном каталоге собрали продукты, бытовую химию и товары для всей семьи — <br>
+                        от повседневных покупок до подарков близким. <br> Бонусом идет бесплатная доставка по городу и области, а
+                        также <br> возможность оформить заказ онлайн.
+                    </p>
+                    <a href="#friends" class="button hero__button button_border">Перейти в каталог</a>
+                </div>
+            </div>
+        </section>
+        <section class="promo" id="promo">
+            <h2 class="promo__title">Акции и скидки</h2>
+
+            <ul class="promo__grid">
+                <li class="promo__card promo__card--large">
+                    <span class="promo__badge">−20%</span>
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--dairy" src="img/promo-dairy.png" alt="Скидка на молочные продукты">
+                    </div>
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Молочные продукты</h3>
+                        <p class="promo__card-text">Скидка на весь ассортимент молока, сыров и йогуртов до конца месяца.</p>
+                    </div>
+                </li>
+
+                <li class="promo__card promo__card--medium">
+                    <span class="promo__badge">2 по цене 1</span>
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--hygiene" src="img/promo-hygiene.png" alt="Акция на средства гигиены">
+                    </div>
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Средства гигиены</h3>
+                    </div>
+                </li>
+
+                <li class="promo__card promo__card--medium">
+                    <span class="promo__badge">−15%</span>
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--household" src="img/promo-household.jpg" alt="Скидка на хозтовары">
+                    </div>
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Хозяйственные товары</h3>
+                    </div>
+                </li>
+
+                <li class="promo__card promo__card--small">
+                    <span class="promo__badge">−10%</span>
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--kids" src="img/promo-kids.png" alt="Скидка на детские товары">
+                    </div>
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Товары для детей</h3>
+                    </div>
+                </li>
+
+                <li class="promo__card promo__card--small">
+                    <span class="promo__badge">Новинка</span>
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--gifts" src="img/promo-gifts.png" alt="Подарочные наборы">
+                    </div>
+                    <div class="promo__body">
+                        <h3 class="promo__card-title">Подарочные наборы</h3>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="catalog" id="friends">
+            <h2 class="catalog__title">Каталог</h2>
+            <div class="catalog__container">
+                <button class="catalog__arrow catalog__arrow--left" aria-label="Предыдущая категория"></button>
+                <div class="catalog__viewport">
+                    <ul class="catalog__track">
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=household" class="catalog__card-link">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/chemistry.jpeg" alt="Хозяйственные товары" width="240" height="160">
+                                </div>
+                                <h3 class="catalog__card-title">Хозяйственные <br> товары</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=hygiene" class="catalog__card-link">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/hygiene.jpg" alt="Средства гигиены" width="240" height="160">
+                                </div>
+                                <h3 class="catalog__card-title">Средства <br> гигиены</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=products" class="catalog__card-link">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/products.jpg" alt="Продукты" width="240" height="160">
+                                </div>
+                                <h3 class="catalog__card-title">Продукты</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="catalog__arrow catalog__arrow--right" aria-label="Следующая категория"></button>
+            </div>
+
+            <a href="./catalog/catalog.html" class="button catalog__more-btn">Посмотреть все товары</a>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="footer__inner">
+            <ul class="footer__contacts">
+                <li>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@importproducts.ru" target="_blank" rel="noopener noreferrer"
+                        class="footer__contact-link">
+                        info@importproducts.ua
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+380991234567" class="footer__contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +380 (99) 123-45-67
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer__social">
+                <div class="footer__social">
+                    <a href="https://github.com/VIKTORIYA-S" class="footer__icon-link" aria-label="GitHub" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://rs.school/" class="footer__icon-link" aria-label="RS School" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2L1 8l11 6 9-4.91V17h2V8L12 2zm0 15.5L4.5 13v3.5c0 2.5 3.36 4.5 7.5 4.5s7.5-2 7.5-4.5V13L12 17.5z" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+
+            <p class="footer__author">Victoria Suprun</p>
+            <p class="footer__copy">© 2026 Import Products. Учебный проект RS School.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
