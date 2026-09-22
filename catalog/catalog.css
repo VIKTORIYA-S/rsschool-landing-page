@@ -114,6 +114,29 @@ body {
     margin-bottom: 12px;
 }
 
+.product__img-wrapper {
+    overflow: hidden;
+    /* обрезает то, что вылезает при увеличении */
+    border-radius: 20px;
+}
+
+.product__img {
+    width: 100%;
+    aspect-ratio: 6 / 5;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+    /* плавность самого увеличения */
+    background-color: var(--color-bg-secondary);
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.product:hover .product__img {
+    transform: scale(1.1);
+    /* картинка увеличивается на 10% */
+}
+
 .product__title {
     font-size: clamp(14px, 1.5vw, 16px);
     font-weight: 400;

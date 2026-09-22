@@ -174,9 +174,11 @@ li a:hover {
 }
 
 .hero__button {
-    width: 260px;
+    /* width: 260px; */
     height: 50px;
     line-height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .button_border {
@@ -409,6 +411,26 @@ li a:hover {
     margin: 0 0 24px;
 }
 
+.about__img-wrapper {
+    overflow: hidden;
+    /* обрезает то, что вылезает при увеличении */
+    border-radius: 20px;
+}
+
+.about__img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    /* плавность самого увеличения */
+}
+
+.about__img-wrapper:hover .about__img {
+    transform: scale(1.1);
+    /* картинка увеличивается на 10% */
+}
+
 @media (min-width: 736px) {
     .about__img {
         width: 75%;
@@ -493,6 +515,26 @@ li a:hover {
     object-fit: cover;
     flex: 1;
     min-height: 0;
+}
+
+.promo__img-wrapper {
+    overflow: hidden;
+    /* обрезает то, что вылезает при увеличении */
+    border-radius: 20px;
+}
+
+.promo__img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    /* плавность самого увеличения */
+}
+
+.promo__card:hover .promo__img {
+    transform: scale(1.1);
+    /* картинка увеличивается на 10% */
 }
 
 .promo__body {
@@ -604,6 +646,26 @@ li a:hover {
     box-shadow: 0 3px 20px -14px rgba(0, 0, 0, 0.6);
     padding-bottom: 30px;
     transition: box-shadow 0.5s;
+}
+
+.catalog__card-img-wrapper {
+    overflow: hidden;
+    /* обрезает то, что вылезает при увеличении */
+    border-radius: 20px;
+}
+
+.catalog__card-img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    /* плавность самого увеличения */
+}
+
+.catalog__card:hover .catalog__card-img {
+    transform: scale(1.1);
+    /* картинка увеличивается на 10% */
 }
 
 @media (max-width: 900px) {

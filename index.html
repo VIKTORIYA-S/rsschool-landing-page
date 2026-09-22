@@ -71,7 +71,7 @@
                         В нашем магазине вы можете приобрести не только свежайшие продукты,
                         средства гигиены и бытовую химию, но и приятные подарки для своих близких.
                     </p>
-                    <a href="#friends" class="button hero__button button_border">Перейти в каталог</a>
+                    <a href="./catalog/catalog.html" class="button hero__button button_border">Посмотреть все товары</a>
                 </div>
                 <img class="hero__promo" src="img/plate.png" alt="Праздничный набор продуктов">
             </div>
@@ -79,9 +79,15 @@
         <section class="about" id="about">
             <div class="about__inner">
                 <div class="about__gallery">
-                    <img class="about__img about__img--1" src="img/chemistry.jpeg" alt="Средства для уборки дома">
-                    <img class="about__img about__img--2" src="img/hygiene.jpg" alt="Средства гигиены">
-                    <img class="about__img about__img--3" src="img/products.jpg" alt="Продукты и напитки">
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--1" src="img/chemistry.jpeg" alt="Средства для уборки дома">
+                    </div>
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--2" src="img/hygiene.jpg" alt="Средства гигиены">
+                    </div>
+                    <div class="about__img-wrapper">
+                        <img class="about__img about__img--3" src="img/products.jpg" alt="Продукты и напитки">
+                    </div>
                 </div>
                 <div class="about__content">
                     <h2 class="about__title">Обо всём, что есть в нашем магазине</h2>
@@ -100,7 +106,9 @@
             <ul class="promo__grid">
                 <li class="promo__card promo__card--large">
                     <span class="promo__badge">−20%</span>
-                    <img class="promo__img promo__img--dairy" src="img/promo-dairy.png" alt="Скидка на молочные продукты">
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--dairy" src="img/promo-dairy.png" alt="Скидка на молочные продукты">
+                    </div>
                     <div class="promo__body">
                         <h3 class="promo__card-title">Молочные продукты</h3>
                         <p class="promo__card-text">Скидка на весь ассортимент молока, сыров и йогуртов до конца месяца.</p>
@@ -109,7 +117,9 @@
 
                 <li class="promo__card promo__card--medium">
                     <span class="promo__badge">2 по цене 1</span>
-                    <img class="promo__img promo__img--hygiene" src="img/promo-hygiene.png" alt="Акция на средства гигиены">
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--hygiene" src="img/promo-hygiene.png" alt="Акция на средства гигиены">
+                    </div>
                     <div class="promo__body">
                         <h3 class="promo__card-title">Средства гигиены</h3>
                     </div>
@@ -117,7 +127,9 @@
 
                 <li class="promo__card promo__card--medium">
                     <span class="promo__badge">−15%</span>
-                    <img class="promo__img promo__img--household" src="img/promo-household.jpg" alt="Скидка на хозтовары">
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--household" src="img/promo-household.jpg" alt="Скидка на хозтовары">
+                    </div>
                     <div class="promo__body">
                         <h3 class="promo__card-title">Хозяйственные товары</h3>
                     </div>
@@ -125,7 +137,9 @@
 
                 <li class="promo__card promo__card--small">
                     <span class="promo__badge">−10%</span>
-                    <img class="promo__img promo__img--kids" src="img/promo-kids.png" alt="Скидка на детские товары">
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--kids" src="img/promo-kids.png" alt="Скидка на детские товары">
+                    </div>
                     <div class="promo__body">
                         <h3 class="promo__card-title">Товары для детей</h3>
                     </div>
@@ -133,7 +147,9 @@
 
                 <li class="promo__card promo__card--small">
                     <span class="promo__badge">Новинка</span>
-                    <img class="promo__img promo__img--gifts" src="img/promo-gifts.png" alt="Подарочные наборы">
+                    <div class="promo__img-wrapper">
+                        <img class="promo__img promo__img--gifts" src="img/promo-gifts.png" alt="Подарочные наборы">
+                    </div>
                     <div class="promo__body">
                         <h3 class="promo__card-title">Подарочные наборы</h3>
                     </div>
@@ -148,21 +164,27 @@
                     <ul class="catalog__track">
                         <li class="catalog__card">
                             <a href="./catalog/catalog.html?category=household" class="catalog__card-link">
-                                <img class="catalog__card-img" src="img/chemistry.jpeg" alt="Хозяйственные товары" width="240" height="160">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/chemistry.jpeg" alt="Хозяйственные товары" width="240" height="160">
+                                </div>
                                 <h3 class="catalog__card-title">Хозяйственные <br> товары</h3>
                                 <span class="button catalog__card-btn">Посмотреть</span>
                             </a>
                         </li>
                         <li class="catalog__card">
                             <a href="./catalog/catalog.html?category=hygiene" class="catalog__card-link">
-                                <img class="catalog__card-img" src="img/hygiene.jpg" alt="Средства гигиены" width="240" height="160">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/hygiene.jpg" alt="Средства гигиены" width="240" height="160">
+                                </div>
                                 <h3 class="catalog__card-title">Средства <br> гигиены</h3>
                                 <span class="button catalog__card-btn">Посмотреть</span>
                             </a>
                         </li>
                         <li class="catalog__card">
                             <a href="./catalog/catalog.html?category=products" class="catalog__card-link">
-                                <img class="catalog__card-img" src="img/products.jpg" alt="Продукты" width="240" height="160">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/products.jpg" alt="Продукты" width="240" height="160">
+                                </div>
                                 <h3 class="catalog__card-title">Продукты</h3>
                                 <span class="button catalog__card-btn">Посмотреть</span>
                             </a>
