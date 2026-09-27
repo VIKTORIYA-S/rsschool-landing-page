@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Рендер карточек
 
+  // Рендер карточек
   const productsContainer = document.getElementById("products");
   const showMoreBtn = document.getElementById("showMore");
 
@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let displayedCount = 0;
   let productsData = {};
 
-  // Загружаем JSON
   fetch("catalog.json")
     .then((res) => res.json())
     .then((data) => {
@@ -82,25 +81,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       renderProducts("all");
     });
-
+  
   // Функция для рендера карточки
   function renderCard(product) {
     const card = document.createElement("li");
     card.classList.add("product");
     card.innerHTML = `
-                    <div class="product__img-wrapper">
-                        <img class="product__img" src="../img/${product.img}" alt="${product.name}" width="240" height="200">
-                    </div>
-                    <h3 class="product__title">${product.name}</h3>
-                    <p class="product__desc">${product.description}</p>
-                    <div class="product__meta">
-                        <span class="product__weight">${product.volume}</span>
-                        <span class="product__price">${product.price}</span>
-                    </div>
-  `;
+        <div class="product__img-wrapper">
+        <img class="product__img" src="../img/${product.img}" alt="${product.name}" width="240" height="200">
+        </div>
+        <h3 class="product__title">${product.name}</h3>
+        <p class="product__desc">${product.description}</p>
+        <div class="product__meta">
+        <span class="product__weight">${product.volume}</span>
+        <span class="product__price">${product.price}</span>
+        </div>
+ `;
     productsContainer.appendChild(card);
   }
-
+  
   // Функция для вывода товаров
   function renderProducts(category) {
     productsContainer.innerHTML = "";
@@ -120,17 +119,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showNextProducts();
   }
-
+  
   // Функция для показа следующих 8 товаров
   function showNextProducts() {
     const nextProducts = currentProducts.slice(
       displayedCount,
-      displayedCount + 8,
+      displayedCount + 4,
     );
     nextProducts.forEach(renderCard);
     displayedCount += nextProducts.length;
 
-    // скрываем кнопку если товаров больше нет
     if (displayedCount >= currentProducts.length) {
       showMoreBtn.style.display = "none";
     } else {
@@ -139,21 +137,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Обработчики кнопок категорий
-  document.querySelectorAll("filter").forEach((btn) => {
+  const filterButtons = document.querySelectorAll(".filter");
+  filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      console.log(btn);
       currentCategory = btn.dataset.category;
       renderProducts(currentCategory);
+      filterButtons.forEach((button) => {
+        button.classList.remove("filter--active");
+        button.setAttribute("aria-pressed", "false");
+      });
+      btn.classList.add("filter--active");
+      btn.setAttribute("aria-pressed", "true");
     });
   });
 
   // Обработчик "Показать еще"
   showMoreBtn.addEventListener("click", showNextProducts);
 
-  // Инициализация
-  renderProducts("all");
-
-
+  // renderProducts("all");
 
 
 
