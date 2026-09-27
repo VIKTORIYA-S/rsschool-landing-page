@@ -41,6 +41,15 @@ body {
     font-family: 'Georgia', 'Times New Roman', serif;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
 .shop {
     padding: clamp(100px, 12vw, 130px) clamp(16px, 4vw, 40px) clamp(48px, 8vw, 98px);
     text-align: center;
@@ -72,16 +81,19 @@ body {
     cursor: pointer;
     transition: 0.3s;
     white-space: nowrap;
+    outline: none;
 }
 
 .filter:hover {
-    background-color: rgba(154, 6, 6, 0.08);
-    color: var(--color-hover);
+    background-color:var(--color-accent);
+    color: var(--color-bg);
+    outline: none;
 }
 
 .filter--active {
     background-color: var(--color-accent);
     color: var(--color-bg);
+    outline: none;
 }
 
 .shop__grid {
@@ -188,6 +200,7 @@ body {
 
 button.shop__load-more {
     padding: 14px 40px;
+    margin: 0 auto;
 }
 
 .visually-hidden {

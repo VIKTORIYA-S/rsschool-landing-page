@@ -28,7 +28,7 @@
             </a>
 
             <div class="nav__container">
-                <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
@@ -38,7 +38,7 @@
                     <ul>
                         <li><a href="../index.html#about">О нас</a></li>
                         <li><a href="../index.html#promo">Акции и скидки</a></li>
-                        <li><a href="../index.html#friends">Каталог</a></li>
+                        <li><a href="#">Каталог</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
@@ -71,14 +71,14 @@
             <div class="shop__filters" role="group" aria-label="Категории товаров">
                 <button class="filter filter--active" aria-pressed="true" data-category="all">Все товары</button>
                 <button class="filter" aria-pressed="false" data-category="household">Хозяйственные товары</button>
-                <button class="filter" aria-pressed="false" data-category="hygiene">Средства гигиены</button>
+                <button class="filter" aria-pressed="false" data-category="hugiene">Средства гигиены</button>
                 <button class="filter" aria-pressed="false" data-category="products">Продукты</button>
                 <button class="filter" aria-pressed="false" data-category="kids">Товары для детей</button>
             </div>
 
             <h2 class="shop__grid-title visually-hidden">Товары</h2>
 
-            <ul class="shop__grid">
+            <!-- <ul class="shop__grid">
                 <li class="product" data-category="household">
                     <div class="product__img-wrapper">
                         <img class="product__img" src="../img/household_gel.png" alt="Гель для стирки" width="240"
@@ -169,10 +169,23 @@
                         <span class="product__price">65 ₴</span>
                     </div>
                 </li>
-            </ul>
+            </ul> -->
+            <ul id="products" class="products__list shop__grid"></ul>
 
-            <button class="button shop__load-more button_border">Показать ещё</button>
+            <button class="button shop__load-more button_border" id="showMore">Показать ещё</button>
         </section>
+        <div class="modal">
+            <div class="modal__content">
+                <button class="modal__close" aria-label="Закрыть модальное окно">&times;</button>
+                <img class="modal__img" src="" alt="">
+                <h3 class="modal__title"></h3>
+                <p class="modal__desc"></p>
+                <div class="modal__meta">
+                    <span class="modal__weight"></span>
+                    <span class="modal__price"></span>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer" id="contacts">
         <div class="footer__inner">

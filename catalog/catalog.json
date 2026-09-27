@@ -1,0 +1,234 @@
+{
+  "hygiene": [
+    {
+      "img": "hygiene_shampoo.png",
+      "name": "Шампунь",
+      "description": "Для ежедневного ухода за волосами",
+      "volume": "400 мл",
+      "price": "120 грн"
+    },
+    {
+      "img": "deodorant.png",
+      "name": "Дезодорант",
+      "description": "Защита от запаха и свежесть",
+      "volume": "150 мл",
+      "price": "95 грн"
+    },
+    {
+      "img": "hygiene_toothpaste.png",
+      "name": "Зубная паста",
+      "description": "Отбеливающая с фтором",
+      "volume": "100 мл",
+      "price": "65 грн"
+    },
+    {
+      "img": "soap.png",
+      "name": "Мыло",
+      "description": "Туалетное, ароматное",
+      "volume": "90 г",
+      "price": "25 грн"
+    },
+    {
+      "img": "napkins.png",
+      "name": "Бумажные салфетки",
+      "description": "Мягкие двухслойные",
+      "volume": "100 шт",
+      "price": "40 грн"
+    },
+    {
+      "img": "toothbrush.png",
+      "name": "Зубная щетка",
+      "description": "Средней жесткости",
+      "volume": "1 шт",
+      "price": "55 грн"
+    },
+    {
+      "img": "shower_gel.png",
+      "name": "Гель для душа",
+      "description": "Увлажняющий с алоэ",
+      "volume": "250 мл",
+      "price": "85 грн"
+    },
+    {
+      "img": "washcloth.png",
+      "name": "Мочалка",
+      "description": "Для тела, мягкая",
+      "volume": "1 шт",
+      "price": "35 грн"
+    }
+  ],
+  "household": [
+    {
+      "img": "detergent.png",
+      "name": "Стиральный порошок",
+      "description": "Для белого и цветного белья",
+      "volume": "3 кг",
+      "price": "220 грн"
+    },
+    {
+      "img": "household_gel.png",
+      "name": "Гель для стирки",
+      "description": "Эффективный при низких температурах",
+      "volume": "1.5 л",
+      "price": "180 грн"
+    },
+    {
+      "img": "household_sponges.png",
+      "name": "Губки для посуды",
+      "description": "Универсальные, разноцветные",
+      "volume": "5 шт",
+      "price": "45 грн"
+    },
+    {
+      "img": "latex_gloves.png",
+      "name": "Латексные перчатки",
+      "description": "Прочные, одноразовые",
+      "volume": "10 шт",
+      "price": "60 грн"
+    },
+    {
+      "img": "microfiber_cloths.png",
+      "name": "Салфетки из микрофибры",
+      "description": "Для уборки без разводов",
+      "volume": "3 шт",
+      "price": "75 грн"
+    },
+    {
+      "img": "air_freshener.png",
+      "name": "Освежитель воздуха",
+      "description": "Аромат лаванды",
+      "volume": "300 мл",
+      "price": "90 грн"
+    },
+    {
+      "img": "dishwashing_detergent.png",
+      "name": "Средство для мытья посуды",
+      "description": "С экстрактом лимона",
+      "volume": "500 мл",
+      "price": "55 грн"
+    },
+    {
+      "img": "floor_brush.png",
+      "name": "Щетка",
+      "description": "Для пола, жесткая",
+      "volume": "1 шт",
+      "price": "110 грн"
+    }
+  ],
+  "food": [
+    {
+      "img": "milk.png",
+      "name": "Молоко",
+      "description": "Пастеризованное, 2.5%",
+      "volume": "1 л",
+      "price": "38 грн"
+    },
+    {
+      "img": "condensed_milk.png",
+      "name": "Сгущенное молоко",
+      "description": "Классическое с сахаром",
+      "volume": "370 г",
+      "price": "55 грн"
+    },
+    {
+      "img": "chicken_fillet.png",
+      "name": "Куриное филе",
+      "description": "Свежие охлажденные куски",
+      "volume": "1 кг",
+      "price": "160 грн"
+    },
+    {
+      "img": "frozen_vegetables.png",
+      "name": "Овощи замороженные",
+      "description": "Смесь для супа",
+      "volume": "400 г",
+      "price": "70 грн"
+    },
+    {
+      "img": "cheese.png",
+      "name": "Сыр",
+      "description": "Твердый, голландский",
+      "volume": "300 г",
+      "price": "95 грн"
+    },
+    {
+      "img": "canned_fish.png",
+      "name": "Рыбные консервы",
+      "description": "Сардины в масле",
+      "volume": "250 г",
+      "price": "65 грн"
+    },
+    {
+      "img": "juice.png",
+      "name": "Сок",
+      "description": "Апельсиновый, без сахара",
+      "volume": "1 л",
+      "price": "60 грн"
+    },
+    {
+      "img": "candies.png",
+      "name": "Конфеты",
+      "description": "Шоколадные ассорти",
+      "volume": "200 г",
+      "price": "85 грн"
+    }
+  ],
+  "kids": [
+    {
+      "img": "diapers.png",
+      "name": "Подгузники",
+      "description": "Для малышей 4-9 кг",
+      "volume": "30 шт",
+      "price": "320 грн"
+    },
+    {
+      "img": "kids_food.png",
+      "name": "Детское питание (пюре)",
+      "description": "Яблоко и банан",
+      "volume": "120 г",
+      "price": "35 грн"
+    },
+    {
+      "img": "children_bath_gel.png",
+      "name": "Детский гель для купания",
+      "description": "Гипоаллергенный",
+      "volume": "250 мл",
+      "price": "95 грн"
+    },
+    {
+      "img": "rattles.png",
+      "name": "Погремушки",
+      "description": "Разноцветные игрушки",
+      "volume": "2 шт",
+      "price": "70 грн"
+    },
+    {
+      "img": "toy_cars.png",
+      "name": "Машинки",
+      "description": "Игрушечные, металлические",
+      "volume": "3 шт",
+      "price": "150 грн"
+    },
+    {
+      "img": "board_games.png",
+      "name": "Настольные игры",
+      "description": "Развивающие для всей семьи",
+      "volume": "1 набор",
+      "price": "280 грн"
+    },
+    {
+      "img": "backpacks.png",
+      "name": "Рюкзаки",
+      "description": "Детские, яркие",
+      "volume": "1 шт",
+      "price": "350 грн"
+    },
+    {
+      "img": "felt-tip_pens.png",
+      "name": "Фломастеры",
+      "description": "12 цветов",
+      "volume": "1 набор",
+      "price": "60 грн"
+    }
+  ]
+}
