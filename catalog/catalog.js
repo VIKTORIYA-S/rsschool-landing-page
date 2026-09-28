@@ -53,9 +53,10 @@ function renderCard(product) {
         <p class="product__desc">${product.description}</p>
         <div class="product__meta">
         <span class="product__weight">${product.volume}</span>
-        <span class="product__price">${product.price}</span>
+        <span class="product__price">${product.price} грн</span>
         </div>
  `;
+ card.addEventListener("click", () => openModal(product));
   productsContainer.appendChild(card);
 }
 

@@ -5,56 +5,320 @@
       "name": "Шампунь",
       "description": "Для ежедневного ухода за волосами",
       "volume": "400 мл",
-      "price": "120 грн"
+      "price": 120,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "400 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "250 мл",
+              "priceDiff": -35
+            },
+            {
+              "label": "600 мл",
+              "priceDiff": 45
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 95
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "deodorant.png",
       "name": "Дезодорант",
       "description": "Защита от запаха и свежесть",
       "volume": "150 мл",
-      "price": "95 грн"
+      "price": 95,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "150 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "50 мл",
+              "priceDiff": -45
+            },
+            {
+              "label": "200 мл",
+              "priceDiff": 25
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 75
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "hygiene_toothpaste.png",
       "name": "Зубная паста",
       "description": "Отбеливающая с фтором",
       "volume": "100 мл",
-      "price": "65 грн"
+      "price": 65,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "100 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "50 мл",
+              "priceDiff": -25
+            },
+            {
+              "label": "150 мл",
+              "priceDiff": 30
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 50
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "soap.png",
       "name": "Мыло",
       "description": "Туалетное, ароматное",
       "volume": "90 г",
-      "price": "25 грн"
+      "price": 25,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "90 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "70 г",
+              "priceDiff": -5
+            },
+            {
+              "label": "125 г",
+              "priceDiff": 10
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 3 шт",
+              "priceDiff": 40
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "napkins.png",
       "name": "Бумажные салфетки",
       "description": "Мягкие двухслойные",
       "volume": "100 шт",
-      "price": "40 грн"
+      "price": 40,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "100 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "50 шт",
+              "priceDiff": -15
+            },
+            {
+              "label": "200 шт",
+              "priceDiff": 35
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 упаковка",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 3 уп.",
+              "priceDiff": 75
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "toothbrush.png",
       "name": "Зубная щетка",
       "description": "Средней жесткости",
       "volume": "1 шт",
-      "price": "55 грн"
+      "price": 55,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "2 шт",
+              "priceDiff": 90
+            },
+            {
+              "label": "3 шт",
+              "priceDiff": 130
+            }
+          ]
+        },
+        {
+          "name": "Жёсткость",
+          "values": [
+            {
+              "label": "Средняя",
+              "priceDiff": 0
+            },
+            {
+              "label": "Мягкая",
+              "priceDiff": 5
+            },
+            {
+              "label": "Ультрамягкая",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "shower_gel.png",
       "name": "Гель для душа",
       "description": "Увлажняющий с алоэ",
       "volume": "250 мл",
-      "price": "85 грн"
+      "price": 85,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "250 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "150 мл",
+              "priceDiff": -25
+            },
+            {
+              "label": "500 мл",
+              "priceDiff": 60
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 70
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "washcloth.png",
       "name": "Мочалка",
       "description": "Для тела, мягкая",
       "volume": "1 шт",
-      "price": "35 грн"
+      "price": 35,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "2 шт",
+              "priceDiff": 30
+            },
+            {
+              "label": "3 шт",
+              "priceDiff": 55
+            }
+          ]
+        },
+        {
+          "name": "Жёсткость",
+          "values": [
+            {
+              "label": "Мягкая",
+              "priceDiff": 0
+            },
+            {
+              "label": "Средняя",
+              "priceDiff": 5
+            },
+            {
+              "label": "Жёсткая",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     }
   ],
   "household": [
@@ -63,56 +327,316 @@
       "name": "Стиральный порошок",
       "description": "Для белого и цветного белья",
       "volume": "3 кг",
-      "price": "220 грн"
+      "price": 220,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "3 кг",
+              "priceDiff": 0
+            },
+            {
+              "label": "1.5 кг",
+              "priceDiff": -110
+            },
+            {
+              "label": "6 кг",
+              "priceDiff": 190
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 175
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "household_gel.png",
       "name": "Гель для стирки",
       "description": "Эффективный при низких температурах",
       "volume": "1.5 л",
-      "price": "180 грн"
+      "price": 180,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "1.5 л",
+              "priceDiff": 0
+            },
+            {
+              "label": "1 л",
+              "priceDiff": -50
+            },
+            {
+              "label": "3 л",
+              "priceDiff": 150
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 145
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "household_sponges.png",
       "name": "Губки для посуды",
       "description": "Универсальные, разноцветные",
       "volume": "5 шт",
-      "price": "45 грн"
+      "price": 45,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "5 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "3 шт",
+              "priceDiff": -15
+            },
+            {
+              "label": "10 шт",
+              "priceDiff": 40
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 упаковка",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 уп.",
+              "priceDiff": 35
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "latex_gloves.png",
       "name": "Латексные перчатки",
       "description": "Прочные, одноразовые",
       "volume": "10 шт",
-      "price": "60 грн"
+      "price": 60,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "10 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "6 шт",
+              "priceDiff": -20
+            },
+            {
+              "label": "20 шт",
+              "priceDiff": 50
+            }
+          ]
+        },
+        {
+          "name": "Размер",
+          "values": [
+            {
+              "label": "M",
+              "priceDiff": 0
+            },
+            {
+              "label": "S",
+              "priceDiff": 0
+            },
+            {
+              "label": "L",
+              "priceDiff": 5
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "microfiber_cloths.png",
       "name": "Салфетки из микрофибры",
       "description": "Для уборки без разводов",
       "volume": "3 шт",
-      "price": "75 грн"
+      "price": 75,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "3 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "5 шт",
+              "priceDiff": 55
+            },
+            {
+              "label": "10 шт",
+              "priceDiff": 150
+            }
+          ]
+        },
+        {
+          "name": "Размер",
+          "values": [
+            {
+              "label": "30×30 см",
+              "priceDiff": 0
+            },
+            {
+              "label": "40×40 см",
+              "priceDiff": 20
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "air_freshener.png",
       "name": "Освежитель воздуха",
       "description": "Аромат лаванды",
       "volume": "300 мл",
-      "price": "90 грн"
+      "price": 90,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "300 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "150 мл",
+              "priceDiff": -35
+            },
+            {
+              "label": "500 мл",
+              "priceDiff": 60
+            }
+          ]
+        },
+        {
+          "name": "Аромат",
+          "values": [
+            {
+              "label": "Лаванда",
+              "priceDiff": 0
+            },
+            {
+              "label": "Лимон",
+              "priceDiff": 0
+            },
+            {
+              "label": "Океан",
+              "priceDiff": 5
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "dishwashing_detergent.png",
       "name": "Средство для мытья посуды",
       "description": "С экстрактом лимона",
       "volume": "500 мл",
-      "price": "55 грн"
+      "price": 55,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "500 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "250 мл",
+              "priceDiff": -20
+            },
+            {
+              "label": "1 л",
+              "priceDiff": 45
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 45
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "floor_brush.png",
       "name": "Щетка",
       "description": "Для пола, жесткая",
       "volume": "1 шт",
-      "price": "110 грн"
+      "price": 110,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "2 шт",
+              "priceDiff": 90
+            }
+          ]
+        },
+        {
+          "name": "Ручка",
+          "values": [
+            {
+              "label": "Короткая",
+              "priceDiff": 0
+            },
+            {
+              "label": "Длинная",
+              "priceDiff": 25
+            }
+          ]
+        }
+      ]
     }
   ],
   "food": [
@@ -121,56 +645,324 @@
       "name": "Молоко",
       "description": "Пастеризованное, 2.5%",
       "volume": "1 л",
-      "price": "38 грн"
+      "price": 38,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "1 л",
+              "priceDiff": 0
+            },
+            {
+              "label": "0.5 л",
+              "priceDiff": -15
+            },
+            {
+              "label": "2 л",
+              "priceDiff": 35
+            }
+          ]
+        },
+        {
+          "name": "Жирность",
+          "values": [
+            {
+              "label": "2.5%",
+              "priceDiff": 0
+            },
+            {
+              "label": "1.5%",
+              "priceDiff": -2
+            },
+            {
+              "label": "3.2%",
+              "priceDiff": 3
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "condensed_milk.png",
       "name": "Сгущенное молоко",
       "description": "Классическое с сахаром",
       "volume": "370 г",
-      "price": "55 грн"
+      "price": 55,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "370 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "180 г",
+              "priceDiff": -25
+            },
+            {
+              "label": "740 г",
+              "priceDiff": 50
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 банка",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 3 банки",
+              "priceDiff": 85
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "chicken_fillet.png",
       "name": "Куриное филе",
       "description": "Свежие охлажденные куски",
       "volume": "1 кг",
-      "price": "160 грн"
+      "price": 160,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "1 кг",
+              "priceDiff": 0
+            },
+            {
+              "label": "500 г",
+              "priceDiff": -80
+            },
+            {
+              "label": "2 кг",
+              "priceDiff": 150
+            }
+          ]
+        },
+        {
+          "name": "Состояние",
+          "values": [
+            {
+              "label": "Охлаждённое",
+              "priceDiff": 0
+            },
+            {
+              "label": "Замороженное",
+              "priceDiff": -20
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "frozen_vegetables.png",
       "name": "Овощи замороженные",
       "description": "Смесь для супа",
       "volume": "400 г",
-      "price": "70 грн"
+      "price": 70,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "400 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "200 г",
+              "priceDiff": -30
+            },
+            {
+              "label": "800 г",
+              "priceDiff": 60
+            }
+          ]
+        },
+        {
+          "name": "Смесь",
+          "values": [
+            {
+              "label": "Для супа",
+              "priceDiff": 0
+            },
+            {
+              "label": "Для рагу",
+              "priceDiff": 5
+            },
+            {
+              "label": "Гавайская",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "cheese.png",
       "name": "Сыр",
       "description": "Твердый, голландский",
       "volume": "300 г",
-      "price": "95 грн"
+      "price": 95,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "300 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "150 г",
+              "priceDiff": -45
+            },
+            {
+              "label": "500 г",
+              "priceDiff": 65
+            }
+          ]
+        },
+        {
+          "name": "Нарезка",
+          "values": [
+            {
+              "label": "Кусок",
+              "priceDiff": 0
+            },
+            {
+              "label": "Ломтиками",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "canned_fish.png",
       "name": "Рыбные консервы",
       "description": "Сардины в масле",
       "volume": "250 г",
-      "price": "65 грн"
+      "price": 65,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "250 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "125 г",
+              "priceDiff": -30
+            },
+            {
+              "label": "500 г",
+              "priceDiff": 60
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 банка",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 3 банки",
+              "priceDiff": 105
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "juice.png",
       "name": "Сок",
       "description": "Апельсиновый, без сахара",
       "volume": "1 л",
-      "price": "60 грн"
+      "price": 60,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "1 л",
+              "priceDiff": 0
+            },
+            {
+              "label": "0.5 л",
+              "priceDiff": -25
+            },
+            {
+              "label": "2 л",
+              "priceDiff": 55
+            }
+          ]
+        },
+        {
+          "name": "Вкус",
+          "values": [
+            {
+              "label": "Апельсиновый",
+              "priceDiff": 0
+            },
+            {
+              "label": "Яблочный",
+              "priceDiff": -5
+            },
+            {
+              "label": "Мультифрукт",
+              "priceDiff": 5
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "candies.png",
       "name": "Конфеты",
       "description": "Шоколадные ассорти",
       "volume": "200 г",
-      "price": "85 грн"
+      "price": 85,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "200 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "100 г",
+              "priceDiff": -40
+            },
+            {
+              "label": "500 г",
+              "priceDiff": 130
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "Пакет",
+              "priceDiff": 0
+            },
+            {
+              "label": "Подарочная коробка",
+              "priceDiff": 45
+            }
+          ]
+        }
+      ]
     }
   ],
   "kids": [
@@ -179,56 +971,316 @@
       "name": "Подгузники",
       "description": "Для малышей 4-9 кг",
       "volume": "30 шт",
-      "price": "320 грн"
+      "price": 320,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "30 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "20 шт",
+              "priceDiff": -100
+            },
+            {
+              "label": "60 шт",
+              "priceDiff": 280
+            }
+          ]
+        },
+        {
+          "name": "Размер",
+          "values": [
+            {
+              "label": "4–9 кг",
+              "priceDiff": 0
+            },
+            {
+              "label": "3–6 кг",
+              "priceDiff": 0
+            },
+            {
+              "label": "9–14 кг",
+              "priceDiff": 20
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "kids_food.png",
       "name": "Детское питание (пюре)",
       "description": "Яблоко и банан",
       "volume": "120 г",
-      "price": "35 грн"
+      "price": 35,
+      "options": [
+        {
+          "name": "Вес",
+          "values": [
+            {
+              "label": "120 г",
+              "priceDiff": 0
+            },
+            {
+              "label": "80 г",
+              "priceDiff": -10
+            },
+            {
+              "label": "200 г",
+              "priceDiff": 25
+            }
+          ]
+        },
+        {
+          "name": "Вкус",
+          "values": [
+            {
+              "label": "Яблоко и банан",
+              "priceDiff": 0
+            },
+            {
+              "label": "Груша",
+              "priceDiff": 3
+            },
+            {
+              "label": "Персик",
+              "priceDiff": 5
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "children_bath_gel.png",
       "name": "Детский гель для купания",
       "description": "Гипоаллергенный",
       "volume": "250 мл",
-      "price": "95 грн"
+      "price": 95,
+      "options": [
+        {
+          "name": "Объём",
+          "values": [
+            {
+              "label": "250 мл",
+              "priceDiff": 0
+            },
+            {
+              "label": "150 мл",
+              "priceDiff": -30
+            },
+            {
+              "label": "500 мл",
+              "priceDiff": 70
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "1 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "Набор 2 шт",
+              "priceDiff": 75
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "rattles.png",
       "name": "Погремушки",
       "description": "Разноцветные игрушки",
       "volume": "2 шт",
-      "price": "70 грн"
+      "price": 70,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "2 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "1 шт",
+              "priceDiff": -35
+            },
+            {
+              "label": "4 шт",
+              "priceDiff": 120
+            }
+          ]
+        },
+        {
+          "name": "Цвета",
+          "values": [
+            {
+              "label": "Яркие",
+              "priceDiff": 0
+            },
+            {
+              "label": "Пастельные",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "toy_cars.png",
       "name": "Машинки",
       "description": "Игрушечные, металлические",
       "volume": "3 шт",
-      "price": "150 грн"
+      "price": 150,
+      "options": [
+        {
+          "name": "Количество",
+          "values": [
+            {
+              "label": "3 шт",
+              "priceDiff": 0
+            },
+            {
+              "label": "1 шт",
+              "priceDiff": -100
+            },
+            {
+              "label": "5 шт",
+              "priceDiff": 110
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "Пакет",
+              "priceDiff": 0
+            },
+            {
+              "label": "Подарочная коробка",
+              "priceDiff": 40
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "board_games.png",
       "name": "Настольные игры",
       "description": "Развивающие для всей семьи",
       "volume": "1 набор",
-      "price": "280 грн"
+      "price": 280,
+      "options": [
+        {
+          "name": "Комплект",
+          "values": [
+            {
+              "label": "1 набор",
+              "priceDiff": 0
+            },
+            {
+              "label": "2 набора",
+              "priceDiff": 240
+            }
+          ]
+        },
+        {
+          "name": "Упаковка",
+          "values": [
+            {
+              "label": "Стандартная",
+              "priceDiff": 0
+            },
+            {
+              "label": "Подарочная",
+              "priceDiff": 60
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "backpacks.png",
       "name": "Рюкзаки",
       "description": "Детские, яркие",
       "volume": "1 шт",
-      "price": "350 грн"
+      "price": 350,
+      "options": [
+        {
+          "name": "Размер",
+          "values": [
+            {
+              "label": "Средний",
+              "priceDiff": 0
+            },
+            {
+              "label": "Малый",
+              "priceDiff": -50
+            },
+            {
+              "label": "Большой",
+              "priceDiff": 80
+            }
+          ]
+        },
+        {
+          "name": "Комплектация",
+          "values": [
+            {
+              "label": "Только рюкзак",
+              "priceDiff": 0
+            },
+            {
+              "label": "С пеналом",
+              "priceDiff": 90
+            }
+          ]
+        }
+      ]
     },
     {
       "img": "felt-tip_pens.png",
       "name": "Фломастеры",
       "description": "12 цветов",
       "volume": "1 набор",
-      "price": "60 грн"
+      "price": 60,
+      "options": [
+        {
+          "name": "Цвета",
+          "values": [
+            {
+              "label": "12 цветов",
+              "priceDiff": 0
+            },
+            {
+              "label": "6 цветов",
+              "priceDiff": -20
+            },
+            {
+              "label": "24 цвета",
+              "priceDiff": 45
+            }
+          ]
+        },
+        {
+          "name": "Тип",
+          "values": [
+            {
+              "label": "Стандартные",
+              "priceDiff": 0
+            },
+            {
+              "label": "Смываемые",
+              "priceDiff": 10
+            }
+          ]
+        }
+      ]
     }
   ]
 }
