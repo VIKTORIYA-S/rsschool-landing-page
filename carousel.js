@@ -1,62 +1,141 @@
-document.addEventListener("DOMContentLoaded", () => {
+const catalogTrack = document.querySelector(".catalog__track");
+const catalogArrowLeft = document.querySelector(".catalog__arrow--left");
+const catalogArrowRight = document.querySelector(".catalog__arrow--right");
+const originalCards = document.querySelectorAll(".catalog__card");
 
-    const catalogTrack = document.querySelector(".catalog__track");
-    const catalogArrowLeft = document.querySelector(".catalog__arrow--left");
-    const catalogArrowRight = document.querySelector(".catalog__arrow--right");
-    const catalogCards = document.querySelectorAll(".catalog__card");
+const totalCards = originalCards.length;
+let currentSlide = 0;
+let isMoving = false;
 
-    let currentSlide = 0;
+// 1. Делаем копии первых 3 карточек и ставим их в конец
+for (let i = 0; i < Math.min(3, totalCards); i++) {
+  const clone = originalCards[i].cloneNode(true);
+  catalogTrack.appendChild(clone);
+}
 
-    function getSlideWidth() {
-        const cardWidth = catalogCards[0].offsetWidth;
-        const trackGap = parseFloat(getComputedStyle(catalogTrack).gap);
-        return cardWidth + trackGap;
-    }
+// 2. Считаем, на сколько пикселей двигать за один шаг
+function getSlideWidth() {
+  const cardWidth = originalCards[0].offsetWidth;
+  const trackGap = parseFloat(getComputedStyle(catalogTrack).gap);
+  return cardWidth + trackGap;
+}
 
-    console.log(getSlideWidth());
+// 3. Сдвигаем дорожку
+function updateSlider() {
+  catalogTrack.style.transform = `translateX(-${currentSlide * getSlideWidth()}px)`;
+}
 
+// 4. Мгновенный переход без анимации
+function jumpTo(slideNumber) {
+  catalogTrack.style.transition = "none";
+  currentSlide = slideNumber;
+  updateSlider();
+  void catalogTrack.offsetWidth; // заставляем браузер применить изменения сразу
+  catalogTrack.style.transition = ""; // возвращаем анимацию из CSS
+}
 
-    function updateSlider() {
-        let currentMoveSlide =
-          (((currentSlide % catalogCards.length) + catalogCards.length) %
-            catalogCards.length) *
-          getSlideWidth();
-        catalogTrack.style.transform = `translateX(-${currentMoveSlide}px)`
-    }
-    updateSlider();
-
+// 5. Стрелка вправо
 catalogArrowRight.addEventListener("click", () => {
-    currentSlide += 1;
-    if (currentSlide > (catalogCards.length - getVisibleCount())) {
-      currentSlide = 0;
-    }
-
-    updateSlider();
+  if (isMoving) return;
+  isMoving = true;
+  currentSlide += 1;
+  updateSlider();
 });
 
+// 6. Стрелка влево
 catalogArrowLeft.addEventListener("click", () => {
-    currentSlide -= 1;
-    if (currentSlide < 0) {
-      currentSlide = catalogCards.length - getVisibleCount();
-    }
-
-    updateSlider();
+  if (isMoving) return;
+  isMoving = true;
+  if (currentSlide === 0) {
+    jumpTo(totalCards); // незаметно прыгаем на копии в конце
+  }
+  currentSlide -= 1;
+  updateSlider();
 });
 
-
-    function getVisibleCount() {
-        let visibleSlide = 0;
-        if (window.innerWidth > 900) {
-            visibleSlide = 3;
-        } else if (window.innerWidth <= 900 && window.innerWidth >= 600) {
-            visibleSlide = 2;
-        } else if (window.innerWidth < 600) {
-            visibleSlide = 1;
-        }
-         return visibleSlide; }
-
-
+// 7. Когда анимация закончилась
+catalogTrack.addEventListener("transitionend", (event) => {
+  if (event.target !== catalogTrack) return;
+  if (currentSlide >= totalCards) {
+    jumpTo(0); // доехали до копий, незаметно возвращаемся к настоящим
+  }
+  isMoving = false;
 });
+
+// 8. При изменении размера окна пересчитываем позицию
+window.addEventListener("resize", () => {
+  if (currentSlide >= totalCards) {
+    currentSlide = 0;
+  }
+  isMoving = false;
+  jumpTo(currentSlide);
+});
+
+updateSlider();
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+//     const catalogTrack = document.querySelector(".catalog__track");
+//     const catalogArrowLeft = document.querySelector(".catalog__arrow--left");
+//     const catalogArrowRight = document.querySelector(".catalog__arrow--right");
+//     const catalogCards = document.querySelectorAll(".catalog__card");
+
+//     let currentSlide = 0;
+
+//     function getSlideWidth() {
+//         const cardWidth = catalogCards[0].offsetWidth;
+//         const trackGap = parseFloat(getComputedStyle(catalogTrack).gap);
+//         return cardWidth + trackGap;
+//     }
+
+//     console.log(getSlideWidth());
+
+
+//     function updateSlider() {
+//         let currentMoveSlide =
+//           (((currentSlide % catalogCards.length) + catalogCards.length) %
+//             catalogCards.length) *
+//           getSlideWidth();
+//         catalogTrack.style.transform = `translateX(-${currentMoveSlide}px)`
+//     }
+//     updateSlider();
+
+// catalogArrowRight.addEventListener("click", () => {
+//     currentSlide += 1;
+//     if (currentSlide > (catalogCards.length - getVisibleCount())) {
+//       currentSlide = 0;
+//     }
+
+//     updateSlider();
+// });
+
+// catalogArrowLeft.addEventListener("click", () => {
+//     currentSlide -= 1;
+//     if (currentSlide < 0) {
+//       currentSlide = catalogCards.length - getVisibleCount();
+//     }
+
+//     updateSlider();
+// });
+
+
+//     function getVisibleCount() {
+//         let visibleSlide = 0;
+//         if (window.innerWidth > 900) {
+//             visibleSlide = 3;
+//         } else if (window.innerWidth <= 900 && window.innerWidth >= 600) {
+//             visibleSlide = 2;
+//         } else if (window.innerWidth < 600) {
+//             visibleSlide = 1;
+//         }
+//          return visibleSlide; }
+
+
+// });
 
 
 

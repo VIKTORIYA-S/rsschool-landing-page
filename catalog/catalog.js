@@ -9,16 +9,36 @@ let currentProducts = [];
 let displayedCount = 0;
 let productsData = {};
 
+// Обработчики кнопок категорий
+const filterButtons = document.querySelectorAll(".filter");
+
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setActiveCategory(btn.dataset.category);
+  });
+});
+
 fetch("catalog.json")
   .then((res) => res.json())
   .then((data) => {
     productsData = data;
-    console.log("Загруженные данные:", productsData);
-    console.log("hygiene:", productsData.hygiene);
-    console.log("Это массив?", Array.isArray(productsData.hygiene));
-    console.log(productsData.hygiene);
 
-    renderProducts("all");
+    // Берём из адреса страницы значение после "category="
+    const params = new URLSearchParams(window.location.search);
+    const categoryFromUrl = params.get("category");
+
+    // Список допустимых категорий берём из самих кнопок
+    const validCategories = Array.from(filterButtons).map(
+      (button) => button.dataset.category,
+    );
+
+    // Если категория из ссылки есть в списке, открываем её, иначе "all"
+    const startCategory = validCategories.includes(categoryFromUrl)
+      ? categoryFromUrl
+      : "all";
+
+    setActiveCategory(startCategory);
   });
 
 // Функция для рендера карточки
@@ -37,6 +57,18 @@ function renderCard(product) {
         </div>
  `;
   productsContainer.appendChild(card);
+}
+
+
+function setActiveCategory(category) {
+  currentCategory = category;
+  renderProducts(category);
+
+  filterButtons.forEach((button) => {
+    const isActive = button.dataset.category === category;
+    button.classList.toggle("filter--active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
 }
 
 // Функция для вывода товаров
@@ -75,25 +107,24 @@ function showNextProducts() {
   }
 }
 
-// Обработчики кнопок категорий
-const filterButtons = document.querySelectorAll(".filter");
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    currentCategory = btn.dataset.category;
-    renderProducts(currentCategory);
-    filterButtons.forEach((button) => {
-      button.classList.remove("filter--active");
-      button.setAttribute("aria-pressed", "false");
-    });
-    btn.classList.add("filter--active");
-    btn.setAttribute("aria-pressed", "true");
-  });
-});
-
 // Обработчик "Показать еще"
 showMoreBtn.addEventListener("click", showNextProducts);
 
-// renderProducts("all");
+
+
+
+
+// // 1. Берём из адреса страницы всё, что стоит после знака "?"
+// const params = new URLSearchParams(window.location.search);
+
+// // 2. Достаём значение параметра category (например, "hygiene")
+// const categoryFromUrl = params.get("category");
+
+// // 3. Выбираем категорию: из ссылки или первую по умолчанию
+// const startCategory = categoryFromUrl || "household";
+
+// // 4. Открываем эту категорию
+// setActiveCategory(startCategory);
 
 
 
