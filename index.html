@@ -25,7 +25,7 @@
             </a>
 
             <div class="nav__container">
-                <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
@@ -71,7 +71,7 @@
                         В нашем магазине вы можете приобрести не только свежайшие продукты,
                         средства гигиены и бытовую химию, но и приятные подарки для своих близких.
                     </p>
-                    <a href="#friends" class="button hero__button button_border">Посмотреть все категории</a>
+                    <a href="#catalog" class="button hero__button button_border">Посмотреть все категории</a>
                 </div>
                 <img class="hero__promo" src="img/plate.png" alt="Праздничный набор продуктов">
             </div>
@@ -96,7 +96,7 @@
                         от повседневных покупок до подарков близким. <br> Бонусом идет бесплатная доставка по городу и области, а
                         также <br> возможность оформить заказ онлайн.
                     </p>
-                    <a href="#friends" class="button hero__button button_border">Перейти в каталог</a>
+                    <a href="./catalog/catalog.html" class="button hero__button button_border">Перейти в каталог</a>
                 </div>
             </div>
         </section>
@@ -156,7 +156,7 @@
                 </li>
             </ul>
         </section>
-        <section class="catalog" id="friends">
+        <section class="catalog" id="catalog">
             <h2 class="catalog__title">Каталог</h2>
             <div class="catalog__container">
                 <button class="catalog__arrow catalog__arrow--left" aria-label="Предыдущая категория"></button>
@@ -181,11 +181,20 @@
                             </a>
                         </li>
                         <li class="catalog__card">
-                            <a href="./catalog/catalog.html?category=products" class="catalog__card-link">
+                            <a href="./catalog/catalog.html?category=food" class="catalog__card-link">
                                 <div class="catalog__card-img-wrapper">
                                     <img class="catalog__card-img" src="img/products.jpg" alt="Продукты" width="240" height="160">
                                 </div>
                                 <h3 class="catalog__card-title">Продукты</h3>
+                                <span class="button catalog__card-btn">Посмотреть</span>
+                            </a>
+                        </li>
+                        <li class="catalog__card">
+                            <a href="./catalog/catalog.html?category=kids" class="catalog__card-link">
+                                <div class="catalog__card-img-wrapper">
+                                    <img class="catalog__card-img" src="img/promo-kids.png" alt="Товары для детей" width="240" height="160">
+                                </div>
+                                <h3 class="catalog__card-title">Товары <br> для детей</h3>
                                 <span class="button catalog__card-btn">Посмотреть</span>
                             </a>
                         </li>
@@ -201,7 +210,7 @@
         <div class="footer__inner">
             <ul class="footer__contacts">
                 <li>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@importproducts.ru" target="_blank" rel="noopener noreferrer"
+                    <a href="mailto:info@importproducts.ru" target="_blank" rel="noopener noreferrer"
                         class="footer__contact-link">
                         info@importproducts.ua
                     </a>
@@ -244,5 +253,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="carousel.js"></script>
 </body>
 </html>
